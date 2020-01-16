@@ -3,7 +3,10 @@ describe('Example', () => {
     await device.reloadReactNative();
   });
 
-  it('should say step one', async () => {
-    await expect(element(by.text('Step One'))).toBeVisible();
+  it('should say hello to everyone!', async () => {
+    await expect(element(by.text('Hello, William!'))).toBeVisible();
+    await expect(element(by.text('Hello, Adam!'))).toBeVisible();
+    await expect(element(by.text('Hello, Jeff!'))).toBeVisible();
+    await expect(element(by.text('Hello, Garret!'))).toBeVisible();
   });
 });
