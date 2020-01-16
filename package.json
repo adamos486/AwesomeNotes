@@ -21,8 +21,14 @@
     "babel-jest": "^24.9.0",
     "detox": "^15.1.2",
     "eslint": "^6.5.1",
+    "flow": "^0.2.3",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "prop-types": "^15.7.2",
+    "react-native-gesture-handler": "^1.5.3",
+    "react-native-reanimated": "^1.6.0",
+    "react-native-safe-area-context": "^0.6.2",
+    "react-native-screens": "^2.0.0-alpha.25",
     "react-test-renderer": "16.9.0"
   },
   "jest": {
@@ -35,7 +41,7 @@
         "build": "xcodebuild -workspace ios/AwesomeNotes.xcworkspace -scheme AwesomeNotes -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
         "type": "ios.simulator",
         "device": {
-          "type": "iPhone 11 Pro"
+          "type": "iPhone 11 Pro Max"
         }
       }
     },
