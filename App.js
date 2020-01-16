@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,6 +15,7 @@ import {
   View,
   Text,
   StatusBar,
+  Image,
 } from 'react-native';
 
 import {
@@ -24,7 +26,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+const DocsApp = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -72,7 +74,44 @@ const App: () => React$Node = () => {
   );
 };
 
+const TextAndImageFC = props => {
+  let pic = {
+    uri:
+      'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg',
+  };
+  return (
+    <View style={styles.basic}>
+      <Text>Hello, {props.name}!</Text>
+      <Image source={pic} style={styles.basicImage} />
+    </View>
+  );
+};
+
+TextAndImageFC.propTypes = {
+  name: PropTypes.string.isRequired,
+};
+
+const App = () => {
+  return (
+    <>
+      <TextAndImageFC name={'William'} />
+      <TextAndImageFC name={'Adam'} />
+      <TextAndImageFC name={'Jeff'} />
+      <TextAndImageFC name={'Garret'} />
+    </>
+  );
+};
+
 const styles = StyleSheet.create({
+  basic: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  basicImage: {
+    width: 193,
+    height: 110,
+  },
   scrollView: {
     backgroundColor: Colors.lighter,
   },
